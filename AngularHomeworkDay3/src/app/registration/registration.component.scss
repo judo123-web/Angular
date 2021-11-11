@@ -1,0 +1,76 @@
+
+
+
+form {
+	width: 1000px;
+	height: 750px;
+	margin: auto;
+	border: none;
+
+	.ng-invalid {
+		border: 2px solid red;
+		outline: none;
+	}
+
+	.ng-valid {
+		border: 2px solid green;
+		outline: none;
+	}
+}
+span {
+	color: red;
+}
+label {
+	font-size: 20px;
+	margin-left: 150px;
+	margin-top: 100px;
+}
+input {
+	width: 450px;
+	height: 30px;
+	margin-top: 30px;
+	margin-left: 10px;
+	font-size: large;
+
+
+}
+#phonelab {
+	margin-left: 88px;
+}
+#passlabel {
+	margin-left: 127px;
+}
+#conflabel {
+	margin-left: 54px;
+}
+#nicknamelabel {
+	margin-left: 120px;
+}
+#habituallabel {
+	margin-left: 46px;
+}
+#websitelabel {
+	margin-left: 139px;
+}
+#checkboxlabel {
+	margin-left: 5px;
+	font-size: 21px;
+}
+#checkbox {
+	margin-left: 230px;
+	width: 18px;
+	height: 18px;
+}
+a {
+	text-decoration: none;
+}
+button {
+	margin-left: 230px;
+	margin-top: 30px;
+	width: 130px;
+	height: 30px;
+	font-size: large;
+	border-radius: 10px;
+    // background-color: #4CAF50;
+
+}

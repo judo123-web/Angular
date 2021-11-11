@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        color: #000080;
+    }
+}
+
+hr {
+    border: 5px solid red;
+}
+
+form {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    gap: 5px;
+
+    .ng-invalid {
+        border: 2px solid red;
+        outline: none;
+    }
+    
+    .ng-valid {
+        border: 2px solid green;
+        outline: none;
+    }
+
+    label {
+        font-size: 22px;
+
+        span {
+            color: red;
+        }
+    }
+
+    input {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    button {
+        font-size: 21px;
+        background-color: yellowgreen;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 6px;
+        margin: auto;
+        width: 40%;
+    }
+}

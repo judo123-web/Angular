@@ -1,0 +1,18 @@
+<h1>Users List</h1>
+
+<hr>
+<br>
+<div class="main">
+    <div class="item" *ngFor="let user of users;let i=index;">
+        <h4><span>Email:</span>{{user.email}}</h4>
+        <h4><span>Password:</span>{{user.password}}</h4>
+        <h4><span>Nickname:</span>{{user.nickName}}</h4>
+        <h4><span>Phone:</span>{{user.phoneNumber}}</h4>
+        <h4><span>Website:</span>{{user.Website}}</h4>
+        <div class="buttons">
+            <button (click)="update(user,i)">Update</button>
+            <button (click)="delete(i)">Delete</button>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,35 @@
+<div class="header">
+    <h1>Update Page</h1>
+</div>
+
+<hr>
+<br>
+<form [formGroup]="updateForm">
+    <label for="email"><span>*</span> E-mail:</label>
+    <input formControlName="email">
+    <br>
+
+    <label ><span>*</span> Password:</label>
+    <input  formControlName="password" type="password" placeholder="Enter new Password">
+    <br>
+
+    <label ><span>*</span> Confrim Password:</label>
+    <input formControlName="confirm_password" type="password" placeholder="Confrim new Password" >
+    <br>
+
+    <label ><span>*</span> Nickname:</label>
+    <input formControlName="nickName" type="text"  >
+    <br>
+
+    <label ><span>*</span>Phone Number:</label>
+    <input formControlName="phoneNumber" type="text" >
+    <br>
+
+    <label for="website" ><span>*</span> Website:</label>
+    <input formControlName="Website" >
+    
+    <br>
+
+    <button (click)="update()"  [disabled]="updateForm.invalid">Update</button>
+
+</form>

@@ -1,0 +1,59 @@
+h1 {
+    transform: translate(45%);
+    
+}
+
+hr {
+    border: 5px solid red;
+}
+
+.main {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: -2s;
+    .item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0px;
+        border: 5px solid green;
+        padding: 10px;
+        width: 380px;
+        box-sizing: border-box; 
+        overflow: hidden;
+
+        h4 {
+           font-size: 18px;
+           margin-bottom: 25px;
+           margin-top: 0px;
+           
+           span {
+               font-size: 20px;
+               font-family: bold;
+               margin-right:15px;
+               color: #FF4136;
+           }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        column-gap: 10px;
+        button {
+            font-size: 18px;
+            background-color: yellowgreen;
+            font-weight: bold;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        &>:last-child {
+            background-color: red;
+        }
+    }
+}

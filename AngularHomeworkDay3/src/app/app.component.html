@@ -1,0 +1,10 @@
+<div class="buttons">
+  <button (click)="changetoregistration()">Registration</button>
+  <button (click)="changetouserlist()">User List</button>
+</div>
+
+<app-registration *ngIf="whichpage == 'register'"></app-registration>
+
+<app-users (index)="updateindex = $event" (user)="updateuser = $event" *ngIf="whichpage == 'users'"></app-users>
+
+<app-updateuser [index]="updateindex" [user]="updateuser" *ngIf="whichpage == 'update'"></app-updateuser>

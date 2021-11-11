@@ -1,0 +1,33 @@
+<form action="" [formGroup]="registrationForm">
+    <label for="email"><span>*</span> E-mail:</label>
+    <input formControlName="email" type="text" name="E-mail" id="email">
+    <br>
+
+    <label for="password" id="passlabel"><span>*</span> Password:</label>
+    <input formControlName="password" type="password" name="password" id="password">
+    <br>
+
+    <label for="confrim-password" id="conflabel"><span>*</span> Confrim Password:</label>
+    <input formControlName="confirm_password" type="password" name="confrim-password" id="confrim-password">
+    <br>
+
+    <label for="nickname" id="nicknamelabel"><span>*</span> Nickname:</label>
+    <input formControlName="nickName" type="text" name="Nickname" id="nickname">
+    <br>
+
+    <label for="phone number" id="phonelab"><span>*</span>Phone Number:</label>
+    <input formControlName="phoneNumber" type="text" name="phone" id="phone">
+    <br>
+
+    <label for="website" id="websitelabel"><span>*</span> Website:</label>
+    <input formControlName="Website" type="text" name="website" id="website" placeholder="Website">
+    <br>
+
+    <input formControlName="Checkbox" type="checkbox" id="checkbox">
+    <label for="checkbox" id="checkboxlabel">I have read the <a href="">agreement</a></label>
+    <br>
+
+    <button (click)="submitform()" [disabled]="registrationForm.invalid">Register</button>
+
+
+</form>
