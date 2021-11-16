@@ -1,0 +1,38 @@
+<div class="imgicon"></div>
+
+<h1>Sum Currencies</h1>
+
+<div class="convent" [formGroup]="currencyFrom">
+    <ng-container formArrayName="currencies">
+
+        <ng-container *ngFor="let  _ of currencies.controls; let idx = index" [formGroupName]="idx">
+
+            <div class="row">
+                <input type="number" formControlName="input" (keyup)="sumcurrencies()">
+                <select name="" id="" formControlName="select" (change)="sumcurrencies()">
+                    <option *ngFor="let currencyname of currencynames" value="{{currencyname}}">{{currencyname}}
+                    </option>
+                </select>
+
+                <button class="btn btn-danger" (click)="delete(idx)">x</button>
+            </div>
+
+        </ng-container>
+
+    </ng-container>
+
+    <button id="add" class="btn btn-primary" (click)="addcurrencies()">ADD</button>
+    <br>
+
+    <div class="row second" style="margin-bottom: 500px;">
+        <h3 style="color: green;">Result</h3>
+        <input  type="number" formControlName="resultinput" [value]="value">
+        <select name="" id="" formControlName="resulselect" (change)="changeselect()">
+            <option *ngFor="let currencyname of currencynames"
+                value="{{currencyname}}">{{currencyname}}</option>
+        </select>
+
+    </div>
+
+</div>
+

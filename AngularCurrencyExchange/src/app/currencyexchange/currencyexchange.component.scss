@@ -1,0 +1,67 @@
+.imgicon {
+    background-image: url("http://prithvifx.com/wp-content/uploads/2018/12/money-exchange-300x225.jpg");
+    width: 300px;
+    height: 225px;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+h1 {
+    text-align: center;
+    color: green;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+
+
+.convent {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+        color: green;
+        transform: translate(46%);
+        margin: 0px;
+        font-size: 19px;
+    }
+    .row {
+        display: flex;
+        gap: 15px;
+        input {
+            // background: transparent;
+            border-radius: 6px;
+            font-size: 1.4rem !important;
+            width: 11rem;
+            height: 40px;
+            padding: 4px 10px;
+            border: 2px solid green;
+            outline: none;
+            font-weight: 500;
+            
+        }
+
+        select {
+            // background: transparent;
+            border-radius: 6px;
+            font-size: 1.2rem !important;
+            width: 7rem;
+            height: 40px;
+            padding: 1px 10px;
+            border: 2px solid green;
+            outline: none;
+            font-weight: 500;
+
+            option {
+                font-weight: 500;
+
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.imgicon {
+    background-image: url("https://image.shutterstock.com/image-illustration/gold-currency-symbols-around-globe-260nw-319446131.jpg");
+    width: 350px;
+    height: 280px;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 5%;
+    background-position-y: 20px;
+
+}
+
+
+
+h1 {
+    text-align: center;
+    color: green;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+}
+
+@keyframes cog {
+    100%{ 
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+    }
+
+.convent {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+        color: green;
+        transform: translate(46%);
+        margin: 0px;
+        font-size: 19px;
+    }
+
+    #add {
+        width: 80px;
+        height: 30px;
+        font-size: large;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+    button {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(25%);
+    }
+    .row {
+        display: flex;
+        gap: 15px;
+        input {
+            // background: transparent;
+            border-radius: 6px;
+            font-size: 1.4rem !important;
+            width: 11rem;
+            height: 30px;
+            padding: 4px 10px;
+            border: 2px solid green;
+            outline: none;
+            height: 40px;
+
+        }
+
+        select {
+            // background: transparent;
+            border-radius: 6px;
+            font-size: 1.2rem !important;
+            width: 7rem;
+            height: 40px;
+            padding: 1px 10px;
+            border: 2px solid green;
+            outline: none;
+        }
+    }
+}

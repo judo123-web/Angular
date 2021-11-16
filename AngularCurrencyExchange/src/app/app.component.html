@@ -1,0 +1,9 @@
+<div class="buttons">
+    <button class="btn btn-primary" (click)="whichpage = 'converter'">Move To Currency Converter Page</button>
+    <button class="btn btn-success" (click)="whichpage = 'sumcurrencies'">Move To Sum Currencies Page</button>
+
+</div>
+
+<app-currencyexchange *ngIf="whichpage == 'converter'"></app-currencyexchange>
+
+<app-add-currencies *ngIf="whichpage == 'sumcurrencies'"></app-add-currencies>
