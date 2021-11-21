@@ -1,0 +1,36 @@
+<div  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registration new Employee</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          </button>
+            </div>
+            <div class="modal-body">
+
+                <form [formGroup]="registerForm">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Employ Name</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputSalary" class="form-label">Employ Salary</label>
+                        <input type="number" class="form-control" id="exampleInputSalary" aria-describedby="SalaryHelp" formControlName="salary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputAge" class="form-label">Employ Age</label>
+                        <input type="number" class="form-control" id="exampleInputAge" aria-describedby="AgeHelp" formControlName="age">
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button id="#button1" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button [disabled]="registerForm.invalid" *ngIf="whichbutton == 'add'" (click)="createemployee()"  type="button" class="btn btn-primary">add</button>
+                <button [disabled]="registerForm.invalid" *ngIf="whichbutton == 'update'" (click)="updateEmploy()" type="button" class="btn btn-primary">update</button>
+            </div>
+        </div>
+    </div>
+</div>
+

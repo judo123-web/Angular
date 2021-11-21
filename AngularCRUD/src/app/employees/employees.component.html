@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light bg-primary" >
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Data Base</h1>
+        <div class="d-flex">
+            <button  (click)="reset()" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add
+                User</button>
+        </div>
+    </div>
+</nav>
+
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Salary</th>
+            <th scope="col">Employee Age</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of employeesData | paginate : {itemsPerPage:numberofemployees,currentPage:first}">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary}}</td>
+            <td>{{employee.age}}</td>
+            <td>
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    (click)="edit(employee)">Edit</button>
+                <button class="btn btn-danger mx-3" (click)="delete(employee)">Delete</button>
+            </td>
+
+        </tr>
+        <pagination-controls  (pageChange)="first = $event">
+        </pagination-controls>
+    </tbody>
+
+</table>
+
+<app-employee-register [whichbutton]="whichbutton" [setEmployee]="employee" (arrayvalue)="employeesData = $event">
+</app-employee-register>
