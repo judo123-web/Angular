@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+  form {
+      .ng-pristine {
+          border: 1px solid black ;
+      }
+    .ng-invalid.ng-dirty {
+        border:  2px solid red;
+    }
+
+    .ng-valid {
+        border:  2px solid green;
+    }
+  }
