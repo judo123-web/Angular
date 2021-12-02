@@ -1,0 +1,114 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Data Base</h1>
+        <div class="d-flex">
+            <button  (click)="logout()" class="btn btn-success" >Log Out</button>
+        </div>
+    </div>
+</nav>
+
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Employee Email</th>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Employee Salary</th>
+            <th scope="col">Employee Age</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- <tr *ngFor="let employee of employeesData | paginate : {itemsPerPage:numberofemployees,currentPage:first}"> -->
+        <tr *ngFor="let employee of employeesData" [@show]>
+            <td>{{employee.id}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.salary | currency}}</td>
+            <td>{{employee.age}}</td>
+            <td>
+                <button *ngIf="serviceuser.id == employee.id" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button *ngIf="serviceuser.id == employee.id" class="btn btn-danger mx-3"(click)="getid(employee.id)" data-bs-toggle="modal" data-bs-target="#deletemodal">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Employee</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form [formGroup]="updateEmploy">
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Employ Email</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                            formControlName="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputSalary" class="form-label">Employ Name</label>
+                        <input type="text" class="form-control" id="exampleInputSalary" aria-describedby="SalaryHelp"
+                            formControlName="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputAge" class="form-label">Employ Password</label>
+                        <input type="text" class="form-control" id="exampleInputAge" aria-describedby="AgeHelp"
+                            formControlName="password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputAge" class="form-label">Employ Salary</label>
+                        <input type="number" class="form-control" id="exampleInputAge" aria-describedby="AgeHelp"
+                            formControlName="salary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputAge" class="form-label">Employ Age</label>
+                        <input type="number" class="form-control" id="exampleInputAge" aria-describedby="AgeHelp"
+                            formControlName="age">
+                    </div>
+                    
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button id="#button1" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="updateuser()">update</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update Employee</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <form>
+                    are you sure want to remove user with gmail {{serviceuser.email}}? 
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button id="#button2" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="delete()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

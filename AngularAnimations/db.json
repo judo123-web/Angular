@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "email": "zura@gmail.com",
+      "name": "Zura",
+      "password": "1",
+      "salary": 5656,
+      "age": 45,
+      "id": 3
+    },
+    {
+      "name": "Giuli",
+      "email": "giuli@gmail.com",
+      "password": "giuli123",
+      "salary": 32,
+      "age": 22,
+      "id": 7
+    },
+    {
+      "name": "Fotola",
+      "email": "fotola@gmail.com",
+      "password": "fotola123",
+      "salary": 33,
+      "age": 23,
+      "id": 9
+    },
+    {
+      "name": "Maxo",
+      "email": "maxo@gmail.com",
+      "password": "maxo123",
+      "salary": 0,
+      "age": 80,
+      "id": 6
+    }
+  ]
+}
